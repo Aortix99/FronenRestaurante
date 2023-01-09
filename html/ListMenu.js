@@ -54,14 +54,19 @@ async function deleter(){
 function tabla(lisDatos){
     let body= document.getElementById("listaBody");
     body.innerHTML=null;
+ 
     let size=lisDatos.length;
     for(let i=0; i<size;i++){
+       
+        if(lisDatos[i].ingredienteDto.calorias<=2000){
+       
         let tr=document.createElement('tr');
         let tdid=document.createElement('td');
         let tdtipoDeMenu=document.createElement('td');
         let tdidRestaurante=document.createElement('td');
         let tdnombreM=document.createElement('td');
         let tdprecio=document.createElement('td');
+        let tdcalorias=document.createElement('td')
 
         tdid.innerText=lisDatos[i].id;
 
@@ -84,6 +89,7 @@ function tabla(lisDatos){
         tdidRestaurante.innerText=lisDatos[i].idRestaurante;
         tdnombreM.innerText=lisDatos[i].nombreM;
         tdprecio.innerText=lisDatos[i].precio;
+        tdcalorias.innerText=lisDatos[i].ingredienteDto.calorias;
 
 
       //Crear Icono de Borrado
@@ -150,37 +156,15 @@ function tabla(lisDatos){
         tr.appendChild(tdidRestaurante);
         tr.appendChild(tdnombreM);
         tr.appendChild(tdprecio);
+        tr.appendChild(tdcalorias)
         tr.appendChild(tdborrar);
         tr.appendChild(tdeditar);
         body.appendChild(tr);
+    
+    }else{
+        window.alert("el menu supera los 2.000 calorias")
+    }
     }
     
-}
-
-async function setor(){
-    let result = await menuL.selectAll();
-    let data = result.data
-    console.log(data);
-    selector(data);
-}
-
-
-function selector(lisDatos) {
-   
-    let select = document.getElementById('mySelect');
-  
-
-    let numRestaurantes = lisDatos.length;
-  
-    for (let i=0; i<numRestaurantes; i++) {
-     
-      let option = document.createElement('option');
-
-      option.innerText = lisDatos[i].tipoRestaurante;
     
-      select.appendChild(option);
-    }
-  }
-
-
-  
+}
