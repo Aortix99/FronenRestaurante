@@ -5,12 +5,49 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
-        <input type="text" placeholder="Id menu">
-        <input type="text" placeholder="Nombe">
-        <input type="text" placeholder="Caloria">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/ingrediente.css">
+        <script src="../dto/ingrediente.js"></script>
+        <script src="../locator/ingredientesLocator.js"></script>
+        <script src="../html/ingrediente.js"></script>
 
-    <table> aqui viene la tabla dinamica</table>
+    </head>
+    <body onload="selectAll()">
+
+        <div class="tabla" id="tabla">
+            <div class="contenedor">
+ 
+            <input class="in" type="text" placeholder="id" id="id">
+     
+       
+            <input class="in" type="text" placeholder="Id menu" id="id_menu">
+      
+            <input class="in" type="text" placeholder="Nombe" id="nombre">
+       
+            <input  class="in" type="text" placeholder="Caloria" id="calorias">
+       
+            <button onclick="save()"><img src="../img/guardar-datos.png" width="24px" height="24px" ></button>
+            </div>
+            <table class="table" id="table">
+            <thead class="cuerpo">
+                <tr class="cabecerath">
+                    <th ><h4>Id</h4></th>
+                    <th ><h4>Id menu</h4></th>
+                    <th><h4>Nombre</h4></th>
+                    <th><h4>Calorias</h4></th>
+                    
+            
+                <tbody id="listaBody">
+                    
+                </tbody>
+             
+              </thead>
+              <tr>
+                <tfoot>
+                     <td colspan="5"><h4>Lista de ingredientes</h4></td>
+                     </tfoot>
+              </tr>
+            </table>
+        </div>
     </body>
 </html>

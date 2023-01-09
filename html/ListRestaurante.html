@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/restaurante.css">
     <script src="../dto/restaurante.js"></script>
     <script src="../locator/restauranteLocator.js"></script>
     <script src="../html/ListRestaurante.js"></script>
     <title>Document</title>
 </head>
 <body onload="selectAll()">
-    <div class="Contenedor">
-        <div class="subcontenedor">
-    <input type="text" placeholder="id" id="id">
-    <input type="text" placeholder="RazonSocial" id="razonSocial">
-    <input type="text" placeholder="NombreComercial" id="nombreComercial">
-    <input type="text" placeholder="TipoRestaurante" id="tipoRestaurante">
-    <input type="text" placeholder="CiudadU" id="ciudadU">
-    <input type="text" placeholder="HoraA" id="horaA">
-    <input type="text" placeholder="HoraC" id="horaC">
-</div>
-    <button onclick="save()">Agregar</button>
-</div>
+
 <div class="tabla" id="tabla">
+    <div class="Contenedor">
+   
+        <input type="text" placeholder="id" id="id">
+        <input type="text" placeholder="RazonSocial" id="razonSocial">
+        <input type="text" placeholder="NombreComercial" id="nombreComercial">
+        <input type="text" placeholder="TipoRestaurante" id="tipoRestaurante">
+        <input type="text" placeholder="CiudadU" id="ciudadU">
+        <input type="text" placeholder="HoraA" id="horaA">
+        <input type="text" placeholder="HoraC" id="horaC">
+    
+        <button onclick="save()"><img src="../img/guardar-datos.png" width="24px" height="24px" ></button>
+    </div>
     <table class="table" id="table">
       <thead class="cuerpo">
         <tr class="cabecerath">
@@ -33,6 +36,8 @@
             <th><h5>Ciudad</h5></th>
             <th><h5>Hora de apertura</h5></th>
             <th><h5>Hora cierre</h5></th>
+            <th><h5>Delete</h5></th>
+            <th><h5>Update</h5></th>
        
     
         <tbody id="listaBody">

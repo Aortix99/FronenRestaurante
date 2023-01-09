@@ -1,0 +1,37 @@
+:root {
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    --primario: #784D3C;
+    --gris: #e1e1e1;
+    --blanco: #ffffff;
+    --negro: #000000;
+}
+h1{
+    color: bisque;
+}
+body{
+    background-image: url('../img/Restaurantes.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+::-webkit-input-placeholder {
+    color:#ffffff; } 
+input{
+    background-color: #808080;
+    margin: 2%;
+    border: none;
+    padding: 6px;
+}
+.cont{
+    margin-left: 44%;
+    padding-top: 4%;
+    
+}
+.menu{
+    margin-top: 4%;
+}
+img{
+    mix-blend-mode: multiply;
+}

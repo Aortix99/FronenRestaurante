@@ -1,9 +1,9 @@
 class ingrediente{
-    constructor(Id,id_menu,Nombre,Calorias){
-    this.Id=Id;
+    constructor(id,id_menu,nombre,calorias){
+    this.id=id;
     this.id_menu=id_menu;
-    this.Nombre=Nombre;
-    this.Calorias=Calorias;
+    this.nombre=nombre;
+    this.calorias=calorias;
 
     }
    getId_menu() {
@@ -19,23 +19,23 @@ class ingrediente{
     }
 
     setId(id) {
-        this.Id = id;
+        this.id = id;
     }
 
     getNombre() {
-        return this.Nombre;
+        return this.nombre;
     }
 
     setNombre( nombre) {
-        this.Nombre = nombre;
+        this.nombre = nombre;
     }
 
     getCalorias() {
-        return this.Calorias;
+        return this.calorias;
     }
 
     setCalorias(calorias) {
-        this.Calorias = calorias;
+        this.calorias = calorias;
     }
 }
 

@@ -4,36 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/menu.css">
     <script src="../dto/menu.js"></script>
     <script src="../locator/menuLocator.js"></script>
     <script src="../html/ListMenu.js"></script>
     <title>Document</title>
 </head>
 <body onload="selectAll()">
-    <input type="text" placeholder="id" id="id">
-    <input type="text" placeholder="TipoDeMenu" id="tipoDeMenu">
-    <input type="text" placeholder="IdRestaurante" id="idRestaurante">
-    <input type="text" placeholder="NombreM" id="nombreM">
-    <input type="text" placeholder="precio" id="precio">
 
-    <button onclick="save()">Agregar</button>
-    
     <div class="tabla" id="tabla">
+        <div class="contenedor">
+            <input type="text" placeholder="id" id="id">
+            <input type="text" placeholder="TipoDeMenu" id="tipoDeMenu">
+            <input type="text" placeholder="IdRestaurante" id="idRestaurante">
+            <input type="text" placeholder="NombreM" id="nombreM">
+            <input type="text" placeholder="precio" id="precio">
+        
+            <button onclick="save()"><img src="../img/guardar-datos.png" width="24px" height="24px" ></button>
+        </div>
         <table class="table" id="table">
         <thead class="cuerpo">
             <tr class="cabecerath">
                 <th ><h5>id</h5></th>
                 <th ><h5>Tipo De Menu</h5></th>
                 <th><h5>IdRestaurante</h5></th>
-                <th><h5>Tipo de restaurante</h5></th>
                 <th><h5>Nombre</h5></th>
                 <th><h5>Precio</h5></th>
+                <th><h5>Delete</h5></th>
+                <th><h5>Update</h5></th>
+
+           
                 
         
             <tbody id="listaBody">
                 
             </tbody>
-          
+            <tr>
+                <tfoot>
+                     <td colspan="7"><h4>Lista de Menus</h4></td>
+                     </tfoot>
+              </tr>
           </thead>
         </table>
     </div>

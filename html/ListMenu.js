@@ -11,7 +11,7 @@ async function save(){
     let p = new menu(id,tipoDeMenu,idRestaurante,nombreM,precio);
     console.log(p);
     let result=await menuL.save(p);
-  
+    selectAll();
     }
 
 
@@ -39,7 +39,15 @@ function updatedata(id,tipoDeMenu,idRestaurante,nombreM, precio) {
     document.getElementById('precio').value=precio;
 
 }
-
+async function deleter(){
+    console.log("entre al metodo");
+    let id=document.getElementById('id').value;
+    console.log("nada"+id);
+   let result=await menuL.deleter(id);
+   selectAll();
+   limpiar()
+  
+}
 
 function tabla(lisDatos){
     let body= document.getElementById("listaBody");
@@ -61,7 +69,7 @@ function tabla(lisDatos){
 
 
       //Crear Icono de Borrado
-     let tdborrar = document.createElement('td');
+      let tdborrar = document.createElement('td');
       let aborrar = document.createElement('a');
       aborrar.setAttribute("href","javascript:deleter('"+lisDatos[i].id+"')");
       let imgBorrar = document.createElement('img');
