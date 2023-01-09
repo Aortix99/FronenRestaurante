@@ -58,6 +58,12 @@ input{
     border: none;
     padding: 6px;
 }
+select{
+    background-color: #808080;
+    margin: 2%;
+    border: none;
+    padding: 6px; 
+}
 
 button{
     background-color: #808080;

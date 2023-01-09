@@ -41,8 +41,8 @@ function limpiar(){
     document.getElementById('horaC').value="";
     document.getElementById('horaA').value="";
 }
-function updatedata( razonSocial, nombreComercial, tipoRestaurante, ciudadU, horaA, horaC) {
-    
+function updatedata( id,razonSocial, nombreComercial, tipoRestaurante, ciudadU, horaA, horaC) {
+    document.getElementById('id').value=id;
     document.getElementById('razonSocial').value=razonSocial;
     document.getElementById('nombreComercial').value=nombreComercial;
     document.getElementById('tipoRestaurante').value=tipoRestaurante;
@@ -69,6 +69,22 @@ function tabla(lisDatos){
         tdrazonSocial.innerText=lisDatos[i].razonSocial;
         tdnombreComercial.innerText=lisDatos[i].nombreComercial;
         tdtipoRestaurante.innerText=lisDatos[i].tipoRestaurante;
+
+        if(lisDatos[i].tipoRestaurante==1){
+            tdtipoRestaurante.innerText="Vegano"
+        }else{if(lisDatos[i].tipoRestaurante==2){
+            tdtipoRestaurante.innerText="Vegetariano"
+        }else{
+            if(lisDatos[i].tipoRestaurante==3){
+                tdtipoRestaurante.innerText="Carnes Rojas"
+            }else{
+                if(lisDatos[i].tipoRestaurante==4){
+                    tdtipoRestaurante.innerText="Aves"
+                }
+            }
+        }
+            
+        }
         tdciudadU.innerText=lisDatos[i].ciudadU;
         tdhoraA.innerText=lisDatos[i].horaA;
         tdhoraC.innerText=lisDatos[i].horaC;
@@ -85,7 +101,7 @@ function tabla(lisDatos){
 
     let tdeditar = document.createElement('td');
     let aedit = document.createElement('a');
-    aedit.setAttribute("href","javascript:updatedata('"+lisDatos[i].razonSocial+"','"+lisDatos[i].nombreComercial+"', '"+lisDatos[i].tipoRestaurante+"','"+lisDatos[i].ciudadU+"','"+lisDatos[i].horaA+"','"+lisDatos[i].horaC+"')");
+    aedit.setAttribute("href","javascript:updatedata('"+lisDatos[i].id+"','"+lisDatos[i].razonSocial+"','"+lisDatos[i].nombreComercial+"', '"+lisDatos[i].tipoRestaurante+"','"+lisDatos[i].ciudadU+"','"+lisDatos[i].horaA+"','"+lisDatos[i].horaC+"')");
     let imgEdit = document.createElement('img');
     imgEdit.setAttribute("src","/ventas/img/update.png");
     imgEdit.setAttribute("width","24px");

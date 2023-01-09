@@ -41,7 +41,7 @@ class locatormenu{
      async deleter(id){
         let result = null;
             try {
-                let response = await fetch('http://localhost:8080/api/ingrediente/menu/'+id, {
+                let response = await fetch('http://localhost:8080/api/menu/delete/'+id, {
                     method: 'GET',
                     headers: {
                     'Content-Type': 'application/json;charset=utf-8'

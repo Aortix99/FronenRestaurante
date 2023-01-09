@@ -26,6 +26,26 @@ async function selectAll(){
     tabla(data);
 
 }
+async function deleter(){
+    console.log("entre al metodo");
+    let id=document.getElementById('id').value;
+    console.log("nada"+id);
+   let result=await ingredienteL.deleter(id);
+   selectAll();
+   limpiar();
+}
+function dele(id){
+    document.getElementById('id').value=id;
+}
+
+function updatedata(id,id_menu,nombre,calorias) {
+    document.getElementById('id').value=id;
+    document.getElementById('id_menu').value=id_menu;
+    document.getElementById('nombre').value=nombre;
+    document.getElementById('calorias').value=calorias;
+
+
+}
 
 function tabla(lisDatos){
     let body= document.getElementById("listaBody");
@@ -42,13 +62,35 @@ function tabla(lisDatos){
         tdid_menu.innerText=lisDatos[i].id_menu;
         tdnombre.innerText=lisDatos[i].nombre;
         tdcalorias.innerText=lisDatos[i].calorias;
- 
+
+              //Crear Icono de Borrado
+      let tdborrar = document.createElement('td');
+      let aborrar = document.createElement('a');
+      aborrar.setAttribute("href","javascript:deleter('"+lisDatos[i].id+"')");
+      let imgBorrar = document.createElement('img');
+      imgBorrar.setAttribute("src","/ventas/img/delete.png");
+      imgBorrar.setAttribute("width","24px");
+      imgBorrar.setAttribute("height","24px");
+      aborrar.appendChild(imgBorrar);
+  
+      let tdeditar = document.createElement('td');
+      let aedit = document.createElement('a');
+      aedit.setAttribute("href","javascript:updatedata('"+lisDatos[i].id+"','"+lisDatos[i].id_menu+"','"+lisDatos[i].nombre+"', '"+lisDatos[i].calorias+"')");
+      let imgEdit = document.createElement('img');
+      imgEdit.setAttribute("src","/ventas/img/update.png");
+      imgEdit.setAttribute("width","24px");
+      imgEdit.setAttribute("height","24px");
+      aedit.appendChild(imgEdit);
 
 
+       tdborrar.appendChild(aborrar);
+       tdeditar.appendChild(aedit)
         tr.appendChild(tdid);
         tr.appendChild(tdid_menu);
         tr.appendChild(tdnombre);
         tr.appendChild(tdcalorias);
+        tr.appendChild(tdborrar);
+        tr.appendChild(tdeditar);
         body.appendChild(tr);
     }
     

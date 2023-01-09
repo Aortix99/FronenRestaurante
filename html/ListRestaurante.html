@@ -16,10 +16,15 @@
 <div class="tabla" id="tabla">
     <div class="Contenedor">
    
-        <input type="text" placeholder="id" id="id">
+        <input  class="id" type="text" placeholder="id" id="id" disabled>
         <input type="text" placeholder="RazonSocial" id="razonSocial">
         <input type="text" placeholder="NombreComercial" id="nombreComercial">
-        <input type="text" placeholder="TipoRestaurante" id="tipoRestaurante">
+        <select class="select" name="select" id="tipoRestaurante">
+          <option value="1">Vegano</option>
+          <option value="2" >Vegetariano</option>
+          <option value="3">Carnes Rojas</option>
+          <option value="4">Aves</option>
+        </select>
         <input type="text" placeholder="CiudadU" id="ciudadU">
         <input type="text" placeholder="HoraA" id="horaA">
         <input type="text" placeholder="HoraC" id="horaC">

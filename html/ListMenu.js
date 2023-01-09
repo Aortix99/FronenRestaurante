@@ -18,9 +18,10 @@ async function save(){
 async function selectAll(){
     let result = await menuL.selectAll();
     let data = result.data
-
     console.log(data);
     tabla(data);
+    
+
 
 }
 function limpiar(){
@@ -39,13 +40,14 @@ function updatedata(id,tipoDeMenu,idRestaurante,nombreM, precio) {
     document.getElementById('precio').value=precio;
 
 }
+
 async function deleter(){
     console.log("entre al metodo");
     let id=document.getElementById('id').value;
     console.log("nada"+id);
    let result=await menuL.deleter(id);
    selectAll();
-   limpiar()
+   limpiar();
   
 }
 
@@ -62,7 +64,23 @@ function tabla(lisDatos){
         let tdprecio=document.createElement('td');
 
         tdid.innerText=lisDatos[i].id;
-        tdtipoDeMenu.innerText=lisDatos[i].tipoDeMenu;
+
+            if(lisDatos[i].tipoDeMenu==1){
+                tdtipoDeMenu.innerText="Entrada"
+            }else{if(lisDatos[i].tipoDeMenu==2){
+                tdtipoDeMenu.innerText="Plato fuerte"
+            }else{
+                if(lisDatos[i].tipoDeMenu==3){
+                    tdtipoDeMenu.innerText="Postre"
+                }else{
+                    if(lisDatos[i].tipoDeMenu==4){
+                        tdtipoDeMenu.innerText="Bebida"
+                    }
+                }
+            }
+                
+            }
+        
         tdidRestaurante.innerText=lisDatos[i].idRestaurante;
         tdnombreM.innerText=lisDatos[i].nombreM;
         tdprecio.innerText=lisDatos[i].precio;
@@ -86,6 +104,29 @@ function tabla(lisDatos){
       imgEdit.setAttribute("width","24px");
       imgEdit.setAttribute("height","24px");
       aedit.appendChild(imgEdit);
+      
+      tdid.innerText=lisDatos[i].id;
+
+      if(lisDatos[i].tipoDeMenu==1){
+          tdtipoDeMenu.innerText="Entrada"
+      }else{if(lisDatos[i].tipoDeMenu==2){
+          tdtipoDeMenu.innerText="Plato fuerte"
+      }else{
+          if(lisDatos[i].tipoDeMenu==3){
+              tdtipoDeMenu.innerText="Postre"
+          }else{
+              if(lisDatos[i].tipoDeMenu==4){
+                  tdtipoDeMenu.innerText="Bebida"
+              }
+          }
+      }
+          
+      }
+  
+  tdidRestaurante.innerText=lisDatos[i].idRestaurante;
+  tdnombreM.innerText=lisDatos[i].nombreM;
+  tdprecio.innerText=lisDatos[i].precio;
+
 
 
        tdborrar.appendChild(aborrar);

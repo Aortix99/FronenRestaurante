@@ -50,16 +50,32 @@ body{
 }
 ::-webkit-input-placeholder {
     color:#ffffff; } 
+  
 input{
+
     background-color: #808080;
     margin: 2%;
     border: none;
     padding: 6px;
-}
 
+}
+input {
+    caret-color: red;
+  }
+  input:hover{
+    background-color: #C9C9C9;
+    
+  }
 button{
     margin: 2%;
     margin-top: 0%;
     margin-left: 91.6%;
+
+}
+.select{
+    background-color: #808080;
+    margin: 2%;
+    border: none;
+    padding: 4px;
 
 }

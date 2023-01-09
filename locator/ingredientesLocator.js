@@ -39,7 +39,7 @@ class locatorIngredientes{
      async deleter(id){
         let result = null;
             try {
-                let response = await fetch('http://localhost:8080/api/ingrediente/delete'+id, {
+                let response = await fetch('http://localhost:8080/api/ingrediente/delete/'+id, {
                     method: 'GET',
                     headers: {
                     'Content-Type': 'application/json;charset=utf-8'
