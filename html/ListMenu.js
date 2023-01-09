@@ -122,8 +122,22 @@ function tabla(lisDatos){
       }
           
       }
-  
-  tdidRestaurante.innerText=lisDatos[i].idRestaurante;
+
+  if(lisDatos[i].idRestaurante==1){
+    tdidRestaurante.innerText="Vegano"
+}else{if(lisDatos[i].idRestaurante==2){
+    tdidRestaurante.innerText="Vegetariano"
+}else{
+    if(lisDatos[i].idRestaurante==3){
+        tdidRestaurante.innerText="Carnes Rojas"
+    }else{
+        if(lisDatos[i].idRestaurante==4){
+            tdidRestaurante.innerText="Aves"
+        }
+    }
+}
+    
+}
   tdnombreM.innerText=lisDatos[i].nombreM;
   tdprecio.innerText=lisDatos[i].precio;
 
@@ -142,3 +156,31 @@ function tabla(lisDatos){
     }
     
 }
+
+async function setor(){
+    let result = await menuL.selectAll();
+    let data = result.data
+    console.log(data);
+    selector(data);
+}
+
+
+function selector(lisDatos) {
+   
+    let select = document.getElementById('mySelect');
+  
+
+    let numRestaurantes = lisDatos.length;
+  
+    for (let i=0; i<numRestaurantes; i++) {
+     
+      let option = document.createElement('option');
+
+      option.innerText = lisDatos[i].tipoRestaurante;
+    
+      select.appendChild(option);
+    }
+  }
+
+
+  

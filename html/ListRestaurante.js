@@ -29,8 +29,6 @@ async function deleter(){
     console.log("nada"+id);
    let result=await restauranteL.deleter(id);
    selectAll();
-   
-  
 }
 function limpiar(){
     document.getElementById('id').value="";

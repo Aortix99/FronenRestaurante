@@ -25,6 +25,7 @@ table tfoot{
     background-color: #535353 ;
     color:#fff;
     text-align: center; 
+    
 }
 tr:hover{
     background-color: #535353;
@@ -78,4 +79,34 @@ button{
     border: none;
     padding: 4px;
 
+}
+.container_menu{
+    width: 100%;
+    height: 70px;
+    background-color:  #535353 ;
+    opacity: 0.9;
+}    
+.menu{
+    max-width: 180px;
+    margin: auto;
+    height: 100%;  
+    display: flex;
+
+}
+li{
+    width: 100%;
+    display: flex;
+    margin-right: 20px;
+   
+}
+ a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+    text-transform: uppercase;
+    color: #fff;
+    background-color:  #535353 ;
 }

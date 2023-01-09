@@ -11,13 +11,36 @@
     <script src="../html/ListMenu.js"></script>
     <title>Document</title>
 </head>
-<body onload="selectAll()">
+<body onload="selectAll()" onload="setor()">
 
-    <div class="tabla" id="tabla">
+<div class="container_menu">
+    <div class="menu">
+
+<li><a href="index.html">Inicio</a></li>
+<li><a href="ingrediente.html">Ingrediente</a></li>
+    </div>
+</div>
+
+    <div class="tabla" id="tabla" >
         <div class="contenedor">
             <input  class="id" type="text" placeholder="id" id="id" disabled>
-            <input type="text" placeholder="TipoDeMenu" id="tipoDeMenu">
-            <input type="text" placeholder="IdRestaurante" id="idRestaurante">
+
+            <select class="select" name="select" id="tipoDeMenu">
+                <option value="1">Entrada</option>
+                <option value="2" >Plato Fuerte</option>
+                <option value="3">Postre</option>
+                <option value="4">Bebidas</option>
+              </select>
+        <!--        <select id="mySelect" onload="setor()" >
+
+            </select>  -->
+     
+            <select class="select" name="select" id="IdRestaurante">
+                <option value="1">Vegano</option>
+                <option value="2" >Vegetariano</option>
+                <option value="3">Carnes Rojas</option>
+                <option value="4">Aves</option>
+              </select>
             <input type="text" placeholder="NombreM" id="nombreM">
             <input type="text" placeholder="precio" id="precio">
         
