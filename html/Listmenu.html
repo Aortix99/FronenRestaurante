@@ -4,16 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../dto/menu.js"></script>
+    <script src="../locator/menuLocator.js"></script>
+    <script src="../html/ListMenu.js"></script>
     <title>Document</title>
 </head>
-<body>
-    <input type="text" placeholder="TipoDeMenu">
-    <input type="text" placeholder="IdRestaurante">
-    <input type="text" placeholder="NombreM">
-    <input type="text" placeholder="precio">
+<body onload="selectAll()">
+    <input type="text" placeholder="id" id="id">
+    <input type="text" placeholder="TipoDeMenu" id="tipoDeMenu">
+    <input type="text" placeholder="IdRestaurante" id="idRestaurante">
+    <input type="text" placeholder="NombreM" id="nombreM">
+    <input type="text" placeholder="precio" id="precio">
 
-    <button>Agregar</button>
+    <button onclick="save()">Agregar</button>
     
-    <table>aqui viene una tabla dinamica</table>
+    <div class="tabla" id="tabla">
+        <table class="table" id="table">
+        <thead class="cuerpo">
+            <tr class="cabecerath">
+                <th ><h5>id</h5></th>
+                <th ><h5>Tipo De Menu</h5></th>
+                <th><h5>IdRestaurante</h5></th>
+                <th><h5>Tipo de restaurante</h5></th>
+                <th><h5>Nombre</h5></th>
+                <th><h5>Precio</h5></th>
+                
+        
+            <tbody id="listaBody">
+                
+            </tbody>
+          
+          </thead>
+        </table>
+    </div>
+
+
 </body>
 </html>

@@ -23,7 +23,7 @@ class locatormenu{
     async selectAll(){
         let result = null;
             try {
-                let response = await fetch('http://localhost:8080/menu/all', {
+                let response = await fetch('http://localhost:8080/api/menu/all', {
                     method: 'POST',
                     headers: {
                     'Content-Type': 'application/json;charset=utf-8'

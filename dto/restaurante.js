@@ -1,12 +1,12 @@
 class restaurante{
-    constructor(id, RazonSocial, NombreComercial, TipoRestaurante, CiudadU, HoraA, HoraC){
+    constructor(id, razonSocial, nombreComercial, tipoRestaurante, ciudadU, horaA, horaC){
   this.id=id;
-  this.RazonSocial=RazonSocial;
-  this.NombreComercial=NombreComercial;
-  this.TipoRestaurante=TipoRestaurante;
-  this.CiudadU=CiudadU;
-  this.HoraA=HoraA;
-  this.HoraC=HoraC;
+  this.razonSocial=razonSocial;
+  this.nombreComercial=nombreComercial;
+  this.tipoRestaurante=tipoRestaurante;
+  this.ciudadU=ciudadU;
+  this.horaA=horaA;
+  this.horaC=horaC;
     }
     getId() {
         return this.id;
@@ -17,51 +17,51 @@ class restaurante{
      }
   
     getRazonSocial() {
-        return this.RazonSocial;
+        return this.razonSocial;
      }
   
     setRazonSocial(razonSocial) {
-        this.RazonSocial = razonSocial;
+        this.razonSocial = razonSocial;
      }
   
     getNombreComercial() {
-        return this.NombreComercial;
+        return this.nombreComercial;
      }
   
     setNombreComercial(nombreComercial) {
-        this.NombreComercial = nombreComercial;
+        this.nombreComercial = nombreComercial;
      }
   
      getTipoRestaurante() {
-        return this.TipoRestaurante;
+        return this.tipoRestaurante;
      }
   
     setTipoRestaurante(tipoRestaurante) {
-        this.TipoRestaurante = tipoRestaurante;
+        this.tipoRestaurante = tipoRestaurante;
      }
   
     getCiudadU() {
-        return this.CiudadU;
+        return this.ciudadU;
      }
   
     setCiudadU(ciudadU) {
-        this.CiudadU = ciudadU;
+        this.ciudadU = ciudadU;
      }
   
     getHoraC() {
-        return this.HoraC;
+        return this.horaC;
      }
   
     setHoraC(horaC) {
-        this.HoraC = horaC;
+        this.horaC = horaC;
      }
   
     getHoraA() {
-        return this.HoraA;
+        return this.horaA;
      }
   
      setHoraA(horaA) {
-        this.HoraA = horaA;
+        this.horaA = horaA;
      }
   
 }

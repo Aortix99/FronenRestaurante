@@ -1,9 +1,9 @@
 class menu{
-    constructor(id, TipoDeMenu,IdRestaurante,NombreM,precio){
+    constructor(id, tipoDeMenu,idRestaurante,nombreM,precio){
         this.id=id;
-        this.TipoDeMenu=TipoDeMenu;
-        this.IdRestaurante=IdRestaurante;
-        this.NombreM=NombreM;
+        this.tipoDeMenu=tipoDeMenu;
+        this.idRestaurante=idRestaurante;
+        this.nombreM=nombreM;
         this.precio=precio
     }
     getId() {
@@ -15,21 +15,21 @@ class menu{
     }
 
     getIdRestaurante() {
-        return this.IdRestaurante;
+        return this.idRestaurante;
     }
 
     setIdRestaurante(idRestaurante) {
-        this.IdRestaurante = idRestaurante;
+        this.idRestaurante = idRestaurante;
     }
 
 
 
     getTipoDeMenu() {
-        return this.TipoDeMenu;
+        return this.tipoDeMenu;
     }
 
     setTipoDeMenu(tipoDeMenu) {
-        this.TipoDeMenu = tipoDeMenu;
+        this.tipoDeMenu = tipoDeMenu;
     }
 
     getNombreM() {
@@ -37,7 +37,7 @@ class menu{
     }
 
     setNombreM(nombreM) {
-        this.NombreM = nombreM;
+        this.nombreM = nombreM;
     }
 
     getPrecio() {
